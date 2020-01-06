@@ -1,12 +1,16 @@
 Stream = require('node-rtsp-stream')
 stream = new Stream({
   name: 'name',
-  streamUrl: 'rtsp://184.72.239.149/vod/mp4:BigBuckBunny_115k.mov',
+  streamUrl: 'rtsp://170.93.143.139/rtplive/470011e600ef003a004ee33696235daa',
   wsPort: 9999,
 })
 
-if(stream) console.log(stream)
-else console.log("not")
+Stream = require('node-rtsp-stream')
+stream1 = new Stream({
+  name: 'name',
+  streamUrl: 'rtsp://freja.hiof.no:1935/rtplive/definst/hessdalen03.stream',
+  wsPort: 9998,
+})
 // const onvif = require('node-onvif');
 
 // let device = new onvif.OnvifDevice({

@@ -20,14 +20,20 @@
     <title>RTSP STREAMING NODE JS IP CAMERA </title>
    <h1>RTSP STREAMING NODE JS IP CAMERA </h1>
     <div><canvas class="camera" id="videoCanvas" width="640" height="360"></canvas></div>
+    <div><canvas class="camera" id="videoCanvas2" width="640" height="360"></canvas></div>
 
     <script type="text/javascript" src="jsmpeg.js"></script>
     <script type="text/javascript">
       var canvas = document.getElementById('videoCanvas');
  
       var ws = new WebSocket("ws://localhost:9999")
-    if (ws) console.log("11111")
       var player = new jsmpeg(ws, {canvas:canvas, autoplay:true,audio:false,loop: true });
+
+      var canvas2 = document.getElementById('videoCanvas2');
+ 
+  var ws2 = new WebSocket("ws://localhost:9998")
+  var player2 = new jsmpeg(ws2, {canvas:canvas2, autoplay:true,audio:false,loop: true });
+
     </script>
 
 <body>
